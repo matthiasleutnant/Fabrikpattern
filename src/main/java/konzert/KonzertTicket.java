@@ -17,4 +17,9 @@ public class KonzertTicket implements TicketInterface {
     void setId(int id) {
         this.id = id;
     }
+
+    @Override
+    public String verifiziereDich() {
+        return this.getClass().getName() + " - " + id;
+    }
 }

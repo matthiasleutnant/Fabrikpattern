@@ -5,7 +5,7 @@ import pattern.TicketInterface;
 
 public class KinoTicket implements TicketInterface {
     private int id;
-    private String Film;
+    private String film;
 
     KinoTicket() {
 
@@ -20,10 +20,15 @@ public class KinoTicket implements TicketInterface {
     }
 
     public String getFilm() {
-        return Film;
+        return film;
     }
 
     void setFilm(String film) {
-        Film = film;
+        this.film = film;
+    }
+
+    @Override
+    public String verifiziereDich() {
+        return this.getClass().getName() + " - " + id + " - " + film;
     }
 }
