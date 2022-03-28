@@ -2,6 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
 import kino.KinoTicketFabrik;
+import konzert.KonzertTicket;
 import konzert.KonzertTicketFabrik;
 import org.junit.jupiter.api.Test;
 import pattern.TicketFabrikInterface;
@@ -19,18 +20,6 @@ public class FabrikTest {
             zufaelligeAktion();
         }
 
-    }
-
-    @Test
-    public void Ticketdemonstration(){
-        List<TicketInterface> ticketListe = new ArrayList<>();
-        initialisiereFabriken();
-        for (int i = 0; i < 100; i++) {
-            ticketListe.add(getZufaelligeFabrik().Ticket());
-        }
-        for(TicketInterface t: ticketListe) {
-            System.out.println(t.verifiziereDich());
-        }
     }
 
     private void initialisiereFabriken() {
